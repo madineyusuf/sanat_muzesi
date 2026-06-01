@@ -1,6 +1,6 @@
 ## Sanat Müzesi
 
-Feyza Yavuz: Kimlik Doğrulama ve Güvenlik Modülü
+## Feyza Yavuz: Kimlik Doğrulama ve Güvenlik Modülü
 Genel Sorumluluk: Sistemin kullanıcı yönetim, güvenlik ve oturum kontrol süreçlerinin hem backend mimarisini kurmak hem de frontend arayüzünü tasarlamak.
 Veritabanı ve Backend Yapılandırması (PHP & MySQL):
 MySQL/MariaDB üzerinde kullanıcı verilerini tutacak olan kullanicilar tablosunun şemasını tasarlamak ve oluşturmak.
@@ -11,7 +11,7 @@ Yönetim sayfalarını koruma altına alan ve yetkisiz (giriş yapmamış) kulla
 Arayüz Tasarımı ve Entegrasyon (Bootstrap Frontend):
 Kullanıcı giriş ve kayıt formlarını Bootstrap bileşenleri (Cards, Forms, Validation, Buttons) kullanarak tamamen stillendirmek ve mobil uyumlu (responsive) hale getirmek.
 Sisteme başarılı giriş yapıldığında kullanıcıyı karşılayan, müze verilerine ait temel istatistikleri barındıran şık bir yönetim paneli (Dashboard) ana sayfası tasarlamak.
-Nurseza Karakaya: Koleksiyon Yönetimi ve Listeleme Modülü (Create & Read)
+## Nurseza Karakaya: Koleksiyon Yönetimi ve Listeleme Modülü (Create & Read)
 Genel Sorumluluk: Müzedeki sanat eserlerinin sisteme dinamik olarak dahil edilmesi ve galeride modern bir mimariyle sergilenmesi süreçlerinin full-stack geliştirilmesini üstlenmek.
 Veritabanı ve Backend Yapılandırması :
 Sanat eserlerine ait detaylı bilgileri (Eser Adı, Sanatçı, Yapım Yılı, Sanat Türü, Açıklama) depolayacak olan eserler tablosunu MySQL üzerinde oluşturmak.
@@ -21,7 +21,7 @@ Arayüz Tasarımı ve Entegrasyon (Bootstrap Frontend):
 Yeni eser ekleme sayfasının (eser-ekle.php) Bootstrap form elemanları, seçici menüler (<select>) ve metin alanları (<textarea>) kullanarak görsel tasarımını yapmak.
 Müze koleksiyonunun sergilendiği ana galeri sayfasını (eserler.php), Bootstrap Cards (Kart yapıları) kullanarak estetik bir düzende listelemek.
 Bootstrap Grid sistemi (row-cols-md-3) kullanarak, kartların büyük ekranlarda yan yana 3 adet listelenmesini, mobil ekranlarda ise alt alta esnek bir şekilde hizalanmasını (responsive) sağlamak.
-Madina Yusupova: Veri Modifikasyonu, Sistem Entegrasyonu ve DevOps (Update, Delete & Deploy)
+## Madina Yusupova: Veri Modifikasyonu, Sistem Entegrasyonu ve DevOps (Update, Delete & Deploy)
 Genel Sorumluluk: Mevcut verilerin yaşam döngüsünü yönetmek (düzenleme/silme), JavaScript entegrasyonlarını tamamlamak, tüm projeyi birleştirmek ve canlı sunucuya (hosting) taşımak.
 Veritabanı ve Backend Yapılandırması:
 Seçilen bir sanat eserinin benzersiz kimlik değerine (id) göre veritabanından kalıcı olarak kaldırılmasını sağlayan backend algoritmasını (eser-sil.php) yazmak (Delete).
