@@ -1,1 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
 
+/* Genel */
+body {
+    background-color: #faf8f4;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #1a1a1a;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e8e0d0;
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #1a1a1a !important;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.navbar .btn-outline-light {
+    border-color: #2d6a2d;
+    color: #2d6a2d;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #2d6a2d;
+    color: #fff;
+}
+
+.navbar .btn-light {
+    background-color: #2d6a2d;
+    border-color: #2d6a2d;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar .btn-outline-danger {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Başlık */
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+
+.display-5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.lead {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+/* Yeşil çizgi (divider) */
+.green-divider {
+    width: 60px;
+    height: 1px;
+    background: #2d6a2d;
+    margin: 16px auto;
+}
+
+/* Eser Kartları */
+.card {
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-top {
+    border-radius: 0 !important;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Hover overlay */
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(250, 248, 244, 0.97);
+    border-top: 2px solid #2d6a2d;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    padding: 14px 16px;
+}
+
+.card:hover .card-body {
+    transform: translateY(0);
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.card-text {
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Card footer (İncele + Favori butonları) */
+.card-footer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: auto;
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.card:hover .card-footer {
+    opacity: 1;
+}
+
+.card-footer .btn-sm {
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #e0d8cc;
+    border-radius: 50% !important;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.card-footer .fav-btn.btn-danger {
+    background: #fff0f0;
+    border-color: #e0a0a0;
+}
+
+/* Butonlar */
+.btn-primary {
+    background-color: #2d6a2d;
+    border-color: #2d6a2d;
+    border-radius: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.btn-primary:hover {
+    background-color: #1e4e1e;
+    border-color: #1e4e1e;
+}
+
+.btn-outline-primary {
+    border-color: #2d6a2d;
+    color: #2d6a2d;
+    border-radius: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2d6a2d;
+    border-color: #2d6a2d;
+}
+
+.btn-outline-secondary {
+    border-radius: 0;
+    letter-spacing: 1px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Form elemanları */
+.form-control, .form-select {
+    border-radius: 0;
+    border-color: #e0d8cc;
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #2d6a2d;
+    box-shadow: 0 0 0 2px rgba(45, 106, 45, 0.15);
+}
+
+.form-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+/* Badge */
+.badge {
+    border-radius: 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.badge.bg-secondary {
+    background-color: #e8e0d0 !important;
+    color: #666 !important;
+}
+
+/* Alert */
+.alert {
+    border-radius: 0;
+    border-left: 3px solid;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    background: #f9f9f9;
+}
+
+.alert-danger { border-left-color: #dc3545; }
+.alert-success { border-left-color: #2d6a2d; color: #2d6a2d; }
+
+/* Yorum kartları */
+#yorumlar .card {
+    border-left: 2px solid #e0d8cc !important;
+    border-radius: 0 !important;
+    background: #fff;
+    position: static;
+    overflow: visible;
+}
+
+#yorumlar .card-body {
+    position: static;
+    transform: none;
+    background: #fff;
+    border: none;
+    padding: 12px 16px;
+}
+
+#yorumlar .card:hover .card-body {
+    transform: none;
+}
+
+#yorumlar .card:hover {
+    border-left-color: #2d6a2d !important;
+}
+
+/* Profil sayfası */
+.card.shadow-sm {
+    border: 1px solid #e8e0d0 !important;
+    border-radius: 0 !important;
+    background: #fff;
+    position: static;
+    overflow: visible;
+}
+
+.card.shadow-sm .card-body {
+    position: static;
+    transform: none;
+    background: #fff;
+    border: none;
+    padding: 1.25rem;
+}
+
+.card.shadow-sm:hover .card-body {
+    transform: none;
+}
+
+.card.shadow-sm:hover img {
+    transform: none;
+}
+
+.card-header {
+    background-color: #1a1a1a !important;
+    border-radius: 0 !important;
+    padding: 14px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a !important;
+    letter-spacing: 2px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+/* Arama çubuğu */
+.input-group .btn,
+form .btn {
+    border-radius: 0;
+}
