@@ -2,6 +2,11 @@
 
 /* Genel */
 body {
+    background-image: url('assets/images/marble.jpg'); 
+    background-repeat: no-repeat; /* Görselin bitince kendini tekrar etmesini engeller */
+    background-size: cover; /* Görseli ekrana sığdırır: Oranları koruyarak alanı tamamen kaplar */
+    background-position: center;
+    background-attachment: fixed; /* Sayfa aşağı kaysa bile arka planın sabit kalmasını sağlar */
     background-color: #faf8f4;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
