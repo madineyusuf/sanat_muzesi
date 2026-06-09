@@ -60,6 +60,7 @@ INSERT INTO eserler (eser_adi, sanatci, yil, tur, aciklama) VALUES
 ALTER TABLE eserler ADD COLUMN gorsel_yolu VARCHAR(255) DEFAULT NULL;
 
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/starry-night.jpg' WHERE eser_adi = 'The Starry Night';
+UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/empire-of-ligth.jpg' WHERE eser_adi = 'The Empire of Light';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/mona-lisa.jpg' WHERE eser_adi = 'Mona Lisa';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/the-scream.jpg' WHERE eser_adi = 'The Scream';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/persistence-of-memory.jpg' WHERE eser_adi = 'The Persistence of Memory';
@@ -72,3 +73,5 @@ UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/black-square.jpg' WHERE
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/ivan-terrible.jpg' WHERE eser_adi = 'Ivan the Terrible and His Son Ivan';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/venus-de-milo.jpg' WHERE eser_adi = 'Venus de Milo';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/carnation-lily.jpg' WHERE eser_adi = 'Carnation, Lily, Lily, Rose';
+UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/ali-nino.jpg' WHERE eser_adi = 'Ali ve Nino';
+UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/weight-of-thoughts.jpg' WHERE eser_adi = 'The Weight of Thoughts';
