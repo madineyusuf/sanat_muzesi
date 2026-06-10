@@ -1,4 +1,4 @@
-# ▶︎ Sanat Müzesi Web Uygulaması ◀︎
+# ▶︎ Sanat Müzesi Web Uygulaması 
 
 Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre filtreleyip arayabileceğiniz, beğendiğiniz eserleri favorilerinize ekleyip toplulukla etkileşime geçebileceğiniz modern ve güvenli bir web uygulamasıdır.
 
