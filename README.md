@@ -4,8 +4,8 @@ Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre
 
  **Canlı Demo:** [http://95.130.171.20/~st24360859922](http://95.130.171.20/~st24360859922)
  
- **Tanıtım Videosu:** 
-[https://youtu.be/y-5IXS5a_pA?si=sFvzvGth1foneC3p](https://youtu.be/y-5IXS5a_pA?si=sFvzvGth1foneC3p)
+ **Tanıtım Videosu:** [https://youtu.be/y-5IXS5a_pA?si=sFvzvGth1foneC3p](https://youtu.be/y-5IXS5a_pA?si=sFvzvGth1foneC3p)
+ 
 ---
 
 ##  Geliştiriciler
