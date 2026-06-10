@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sanat Müzesi</title>
-    <link class="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link class="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link class="stylesheet" href="/~st24360859922/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/~st24360859922/assets/css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="/~st24360859922/index.php">Sanat Müzesi</a>
+        <a class="navbar-brand" href="/~st24360859922/index.php">🎨 Sanat Müzesi</a>
         <div class="ms-auto d-flex align-items-center gap-2">
             <?php if (isLoggedIn()): ?>
                 <a href="/~st24360859922/profile.php" class="btn btn-outline-light btn-sm">
