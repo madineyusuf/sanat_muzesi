@@ -1,6 +1,6 @@
 # ▶︎ Sanat Müzesi Web Uygulaması 
 
-Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre filtreleyip arayabileceğiniz, beğendiğiniz eserleri favorilerinize ekleyip toplulukla etkileşime geçebileceğiniz modern ve güvenli bir web uygulamasıdır.
+Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre filtreleyip arayabileceğiniz, beğendiğiniz eserleri favorilerinize ekleyip toplulukla etkileşime geçebileceğiniz modern ve güvenli bir web uygulamasıdır
 
  **Canlı Demo:** [http://95.130.171.20/~st24360859922](http://95.130.171.20/~st24360859922)
  
