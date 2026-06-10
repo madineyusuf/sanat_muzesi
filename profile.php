@@ -7,13 +7,11 @@ $kullanici_id = $_SESSION['kullanici_id'];
 $success = '';
 $error   = '';
 
-// Profil güncelleme
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $yeni_ad    = trim($_POST['kullanici_adi'] ?? '');
     $yeni_sifre = $_POST['sifre'] ?? '';
 
     if ($yeni_ad && $yeni_ad !== $_SESSION['kullanici_adi']) {
-        // Kullanıcı adı başkası tarafından kullanılıyor mu?
         $kontrol = $pdo->prepare("SELECT id FROM kullanicilar WHERE kullanici_adi = ? AND id != ?");
         $kontrol->execute([$yeni_ad, $kullanici_id]);
         if ($kontrol->fetch()) {
@@ -38,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Favori eserler
 $stmt = $pdo->prepare("
     SELECT e.* FROM eserler e
     JOIN favoriler f ON f.eser_id = e.id
@@ -50,16 +47,16 @@ $favoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <?php require_once 'includes/header.php'; ?>
 
-<div class="container mt-4">
+<main class="flex-grow-1">
+<div class="container mt-4 mb-5">
     <div class="row g-4">
 
-        <!-- Profil Düzenleme -->
         <div class="col-md-4">
-            <div class="card shadow-sm">
-                <div class="card-header bg-dark text-white">
-                    <h5 class="mb-0"><i class="bi bi-person-circle"></i> Profil Bilgileri</h5>
+            <div class="profile-card">
+                <div class="card-header">
+                    <h5 class="mb-0 text-white"><i class="bi bi-person-circle"></i> Profil Bilgileri</h5>
                 </div>
-                <div class="card-body">
+                <div class="p-4">
                     <?php if ($success): ?>
                         <div class="alert alert-success"><?= $success ?></div>
                     <?php endif; ?>
@@ -74,8 +71,7 @@ $favoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                         <div class="mb-3">
                             <label class="form-label">
-                                Yeni Şifre
-                                <small class="text-muted">(boş bırakırsan değişmez)</small>
+                                Yeni Şifre <small class="text-muted">(boş bırakırsan değişmez)</small>
                             </label>
                             <input type="password" name="sifre" class="form-control">
                         </div>
@@ -87,41 +83,36 @@ $favoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
 
-        <!-- Favori Eserler -->
         <div class="col-md-8">
             <h4 class="mb-3">
                 <i class="bi bi-heart-fill text-danger"></i> Favori Eserlerim
-                <span class="badge bg-danger"><?= count($favoriler) ?></span>
+                <span class="badge bg-secondary"><?= count($favoriler) ?></span>
             </h4>
 
             <?php if (empty($favoriler)): ?>
                 <div class="text-center text-muted mt-5">
                     <i class="bi bi-heart fs-1"></i>
                     <p class="mt-2">Henüz favori eser eklemediniz.</p>
-                    <a href="index.php" class="btn btn-outline-primary">Eserleri Keşfet</a>
+                    <a href="/~st24360859922/index.php" class="btn btn-outline-primary">Eserleri Keşfet</a>
                 </div>
             <?php else: ?>
                 <div class="row row-cols-1 row-cols-md-2 g-3">
                     <?php foreach ($favoriler as $eser): ?>
                         <div class="col" id="kart-<?= $eser['id'] ?>">
-                            <div class="card h-100 shadow-sm">
-                                <img src="<?= htmlspecialchars($eser['gorsel_yolu'] ?? 'assets/images/placeholder.jpg') ?>"
-                                     class="card-img-top"
-                                     style="height: 160px; object-fit: cover;"
-                                     alt="<?= htmlspecialchars($eser['eser_adi']) ?>">
-                                <div class="card-body">
-                                    <h6 class="card-title"><?= htmlspecialchars($eser['eser_adi']) ?></h6>
-                                    <p class="card-text text-muted small">
-                                        <?= htmlspecialchars($eser['sanatci']) ?>
-                                    </p>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between">
-                                    <a href="artwork.php?id=<?= $eser['id'] ?>"
-                                       class="btn btn-sm btn-outline-primary">İncele</a>
-                                    <button class="btn btn-sm btn-danger fav-btn"
-                                            data-id="<?= $eser['id'] ?>">
-                                        <i class="bi bi-heart-fill"></i> Çıkar
+                            <div class="art-card">
+                                <div class="img-wrapper">
+                                    <img src="<?= htmlspecialchars($eser['gorsel_yolu'] ?? '/~st24360859922/assets/images/placeholder.jpg') ?>"
+                                         alt="<?= htmlspecialchars($eser['eser_adi']) ?>">
+                                    <button class="fav-btn active" data-id="<?= $eser['id'] ?>">
+                                        <i class="bi bi-heart-fill"></i>
                                     </button>
+                                    <div class="card-info">
+                                        <div>
+                                            <h3><?= htmlspecialchars($eser['eser_adi']) ?></h3>
+                                            <p><?= htmlspecialchars($eser['sanatci']) ?></p>
+                                        </div>
+                                        <a href="/~st24360859922/artwork.php?id=<?= $eser['id'] ?>" class="incele-btn">İncele</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -132,12 +123,13 @@ $favoriler = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     </div>
 </div>
+</main>
 
 <script>
 document.querySelectorAll('.fav-btn').forEach(btn => {
     btn.addEventListener('click', async () => {
         const id = btn.dataset.id;
-        const res = await fetch('api/toggle_favorite.php', {
+        const res = await fetch('/~st24360859922/api/toggle_favorite.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: `eser_id=${id}`
