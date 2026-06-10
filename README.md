@@ -22,7 +22,7 @@
 
 | ☀︎ | *Feyza Yavuz* | 24360859055 
 
-| ♥︎ | *Nurseza Karakaya* | 24360859038 
+| ☆ | *Nurseza Karakaya* | 24360859038 
 
 ---
 
@@ -43,7 +43,7 @@
 
 ## Özellikler
 
-*Bu uygulama, modern bir sanat müzesinin dijital deneyimini sunmak amacıyla geliştirilmiştir.*
+*Bu uygulama, modern bir sanat müzesinin dijital deneyimini sunmak amacıyla geliştirilmiştir*
 
 - **Kullanıcı Yönetimi** — *Güvenli kayıt, giriş ve oturum (Session) yönetimi*
 - **Profil Paneli** — *Kullanıcı adı ve şifre güncelleme*
@@ -68,7 +68,7 @@
 
 ## Veritabanı Mimarisi
 
-*Proje, ilişkisel bir veritabanı modeli üzerine kurulmuştur ve 4 temel tablodan oluşmaktadır.*
+*Proje, ilişkisel bir veritabanı modeli üzerine kurulmuştur ve 4 temel tablodan oluşmaktadır*
 
 | Tablo | Açıklama | Temel Alanlar |
 |:---|:---|:---|
@@ -91,7 +91,7 @@ cd sanat_muzesi
 
 **2. Veritabanını oluşturun**
 
-*phpMyAdmin veya MySQL CLI üzerinden `db.sql` dosyasını içe aktarın.*
+*phpMyAdmin veya MySQL CLI üzerinden `db.sql` dosyasını içe aktarın*
 
 **3. Bağlantı ayarlarını yapın**
 
@@ -99,17 +99,17 @@ cd sanat_muzesi
 cp includes/db.example.php includes/db.php
 ```
 
-*`includes/db.php` dosyasını açıp kendi veritabanı bilgilerinizi girin.*
+*`includes/db.php` dosyasını açıp kendi veritabanı bilgilerinizi girin*
 
 **4. Görselleri ekleyin**
 
-*`assets/images/artworks/` klasörüne eser görsellerini yükleyin.*
+*`assets/images/artworks/` klasörüne eser görsellerini yükleyin*
 
 ---
 
 ## Güvenlik Notları
 
->  *`includes/db.php` dosyası `.gitignore` ile versiyon kontrolünden hariç tutulmuştur. Bu dosyayı asla herkese açık bir repoya yüklemeyin.*
+>  *`includes/db.php` dosyası `.gitignore` ile versiyon kontrolünden hariç tutulmuştur. Bu dosyayı asla herkese açık bir repoya yüklemeyin*
 
 ---
 
