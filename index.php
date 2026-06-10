@@ -37,7 +37,7 @@ $turler = $pdo->query("SELECT DISTINCT tur FROM eserler ORDER BY tur")->fetchAll
 <div class="container mt-4">
 
     <div class="text-center mb-5">
-        <h1 class="display-5">Sanat Müzesi</h1>
+        <h1 class="display-5">KOLEKSİYON</h1>
         <div class="green-divider"></div>
         <p class="text-muted">Dünyanın en ünlü eserlerini keşfedin</p>
     </div>
