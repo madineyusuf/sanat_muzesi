@@ -2,11 +2,11 @@
 
 /* Genel */
 body {
-    background-image: url('assets/images/marble.jpg'); 
-    background-repeat: no-repeat; /* Görselin bitince kendini tekrar etmesini engeller */
-    background-size: cover; /* Görseli ekrana sığdırır: Oranları koruyarak alanı tamamen kaplar */
+    background-image: url('/~st24360859922/assets/images/marble.jpg');
+    background-repeat: repeat;
+    background-size: auto;
     background-position: center;
-    background-attachment: fixed; /* Sayfa aşağı kaysa bile arka planın sabit kalmasını sağlar */
+    background-attachment: fixed;
     background-color: #faf8f4;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -69,14 +69,14 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: #1a1a1a;
 }
 
-.lead {
+.text-muted {
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #999;
+    color: #999 !important;
 }
 
-/* Yeşil çizgi (divider) */
+/* Yeşil çizgi */
 .green-divider {
     width: 60px;
     height: 1px;
@@ -84,96 +84,145 @@ h1, h2, h3, h4, h5, .navbar-brand {
     margin: 16px auto;
 }
 
-/* Eser Kartları */
-.card {
-    border: none !important;
-    border-radius: 0 !important;
-    background: transparent;
+/* ── ESER KARTLARI ── */
+.art-card {
+    position: relative;
+    cursor: pointer;
+    background: #f0ece4;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.art-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+
+.art-card::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border: 1px solid rgba(180,160,120,0.5);
+    pointer-events: none;
+    z-index: 2;
+    transition: border-color 0.3s;
+}
+
+.art-card:hover::before {
+    border-color: rgba(45,106,45,0.4);
+}
+
+.art-card .img-wrapper {
     position: relative;
     overflow: hidden;
+    aspect-ratio: 3/4;
 }
 
-.card-img-top {
-    border-radius: 0 !important;
-    transition: transform 0.4s ease;
+.art-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
 }
 
-.card:hover .card-img-top {
-    transform: scale(1.05);
+.art-card:hover img {
+    transform: scale(1.06);
 }
 
-/* Hover overlay */
-.card-body {
+/* Favori butonu */
+.art-card .fav-btn {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(250, 248, 244, 0.97);
-    border-top: 2px solid #2d6a2d;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    padding: 14px 16px;
+    top: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #e0d8cc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.3s, transform 0.3s, background 0.2s, color 0.2s;
+    color: #aaa;
+    z-index: 3;
 }
 
-.card:hover .card-body {
+.art-card:hover .fav-btn {
+    opacity: 1;
     transform: translateY(0);
 }
 
-.card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 4px;
+.art-card .fav-btn:hover,
+.art-card .fav-btn.active {
+    background: #fff0f0;
+    border-color: #e0a0a0;
+    color: #c0392b;
 }
 
-.card-text {
-    font-size: 11px;
+/* Hover overlay */
+.art-card .card-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(250, 248, 244, 0.97);
+    border-top: 2px solid #2d6a2d;
+    padding: 10px 12px;
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    z-index: 3;
+}
+
+.art-card:hover .card-info {
+    transform: translateY(0);
+}
+
+.art-card .card-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin: 0 0 3px;
+}
+
+.art-card .card-info p {
+    font-size: 10px;
     color: #888;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     margin: 0;
 }
 
-/* Card footer (İncele + Favori butonları) */
-.card-footer {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    left: auto;
-    background: transparent !important;
-    border: none !important;
-    padding: 0;
-    display: flex;
-    gap: 6px;
-    opacity: 0;
-    transition: opacity 0.2s;
+.art-card .incele-btn {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    background: #2d6a2d;
+    padding: 6px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.card:hover .card-footer {
-    opacity: 1;
+.art-card .incele-btn:hover {
+    background: #1e4e1e;
+    color: #fff;
 }
 
-.card-footer .btn-sm {
-    background: rgba(255,255,255,0.92);
-    border: 1px solid #e0d8cc;
-    border-radius: 50% !important;
-    width: 34px;
-    height: 34px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-}
-
-.card-footer .fav-btn.btn-danger {
-    background: #fff0f0;
-    border-color: #e0a0a0;
-}
-
-/* Butonlar */
+/* ── GENEL BUTONLAR ── */
 .btn-primary {
     background-color: #2d6a2d;
     border-color: #2d6a2d;
@@ -263,52 +312,39 @@ h1, h2, h3, h4, h5, .navbar-brand {
     background: #fff;
     position: static;
     overflow: visible;
+    box-shadow: none;
+    transform: none !important;
+    padding: 0;
 }
 
+#yorumlar .card::before { display: none; }
+
 #yorumlar .card-body {
-    position: static;
-    transform: none;
+    position: static !important;
+    transform: none !important;
     background: #fff;
     border: none;
     padding: 12px 16px;
 }
 
 #yorumlar .card:hover .card-body {
-    transform: none;
+    transform: none !important;
 }
 
 #yorumlar .card:hover {
     border-left-color: #2d6a2d !important;
+    transform: none !important;
 }
 
-/* Profil sayfası */
-.card.shadow-sm {
-    border: 1px solid #e8e0d0 !important;
-    border-radius: 0 !important;
+/* Profil sayfası kartları */
+.profile-card {
+    border: 1px solid #e8e0d0;
     background: #fff;
-    position: static;
-    overflow: visible;
+    padding: 0;
 }
 
-.card.shadow-sm .card-body {
-    position: static;
-    transform: none;
-    background: #fff;
-    border: none;
-    padding: 1.25rem;
-}
-
-.card.shadow-sm:hover .card-body {
-    transform: none;
-}
-
-.card.shadow-sm:hover img {
-    transform: none;
-}
-
-.card-header {
+.profile-card .card-header {
     background-color: #1a1a1a !important;
-    border-radius: 0 !important;
     padding: 14px 20px;
 }
 
