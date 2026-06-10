@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
 
-/* Genel */
-html {
-    height: 100% !important;
-}
+html { height: 100% !important; }
 
 body {
     background-image: url('/~st24360859922/assets/images/marble.jpg');
@@ -21,15 +18,9 @@ body {
     margin: 0 !important;
 }
 
-main, .flex-grow-1 {
-    flex: 1 0 auto !important;
-}
+main, .flex-grow-1 { flex: 1 0 auto !important; }
+footer { flex-shrink: 0 !important; }
 
-footer {
-    flex-shrink: 0 !important;
-}
-
-/* Navbar */
 .navbar {
     background-color: #ffffff !important;
     border-bottom: 1px solid #e8e0d0;
@@ -85,7 +76,6 @@ footer {
     color: #fff;
 }
 
-/* Başlıklar */
 h1, h2, h3, h4, h5, .navbar-brand {
     font-family: 'Playfair Display', serif;
 }
@@ -105,7 +95,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: #999 !important;
 }
 
-/* Divider */
 .green-divider {
     width: 60px;
     height: 1px;
@@ -113,7 +102,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
     margin: 16px auto;
 }
 
-/* ── ESER KARTLARI ── */
 .art-card {
     position: relative;
     cursor: pointer;
@@ -160,7 +148,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
     transform: scale(1.04);
 }
 
-/* Favori butonu (galeri kartlarında) */
 .art-card .fav-btn {
     position: absolute;
     top: 8px;
@@ -194,7 +181,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: #bd4b4b;
 }
 
-/* Hover overlay */
 .art-card .card-info {
     position: absolute;
     bottom: 0; left: 0; right: 0;
@@ -251,7 +237,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: #fff;
 }
 
-/* ── ARTWORK SAYFASI: cam efektli kart ── */
 .card.border-0.shadow-sm {
     position: static !important;
     overflow: visible !important;
@@ -260,9 +245,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     background: rgba(255, 255, 255, 0.65) !important;
 }
 
-.card.border-0.shadow-sm::before {
-    display: none !important;
-}
+.card.border-0.shadow-sm::before { display: none !important; }
 
 .card.border-0.shadow-sm:hover {
     transform: none !important;
@@ -276,11 +259,8 @@ h1, h2, h3, h4, h5, .navbar-brand {
     border: none !important;
 }
 
-.card.border-0.shadow-sm:hover .card-body {
-    transform: none !important;
-}
+.card.border-0.shadow-sm:hover .card-body { transform: none !important; }
 
-/* Yorum kartları (artwork sayfası) */
 .card.mb-2 {
     position: static !important;
     overflow: visible !important;
@@ -288,9 +268,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     padding: 0 !important;
 }
 
-.card.mb-2::before {
-    display: none !important;
-}
+.card.mb-2::before { display: none !important; }
 
 .card.mb-2:hover {
     transform: none !important;
@@ -304,11 +282,8 @@ h1, h2, h3, h4, h5, .navbar-brand {
     border: none !important;
 }
 
-.card.mb-2:hover .card-body {
-    transform: none !important;
-}
+.card.mb-2:hover .card-body { transform: none !important; }
 
-/* Profil sayfası */
 .profile-card {
     border: 1px solid #e8e0d0;
     background: #fff;
@@ -318,20 +293,14 @@ h1, h2, h3, h4, h5, .navbar-brand {
     overflow: visible !important;
 }
 
-.profile-card::before {
-    display: none !important;
-}
-
-.profile-card:hover {
-    transform: none !important;
-}
+.profile-card::before { display: none !important; }
+.profile-card:hover { transform: none !important; }
 
 .profile-card .card-header {
     background-color: #1a1a1a !important;
     padding: 14px 20px;
 }
 
-/* ── GENEL BUTONLAR ── */
 .btn-primary {
     background-color: #3d523d;
     border-color: #3d523d;
@@ -382,7 +351,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
     border-color: #b5a48c;
 }
 
-/* Form elemanları */
 .form-control, .form-select {
     border-radius: 0;
     border-color: #e0d8cc;
@@ -405,7 +373,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
     font-weight: 400;
 }
 
-/* Badge */
 .badge {
     border-radius: 0;
     font-weight: 400;
@@ -420,7 +387,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: #6e6557 !important;
 }
 
-/* Alert */
 .alert {
     border-radius: 0;
     border-left: 3px solid;
@@ -434,7 +400,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
 .alert-danger { border-left-color: #bd4b4b; color: #a94442; }
 .alert-success { border-left-color: #3d523d; color: #3d523d; }
 
-/* Footer */
 footer {
     background-color: #1a1a1a !important;
     border-top: 1px solid #2d2d2d;
@@ -444,7 +409,6 @@ footer {
     color: #8a8275 !important;
 }
 
-/* Arama çubuğu */
 .input-group .btn,
 form .btn {
     border-radius: 0;
