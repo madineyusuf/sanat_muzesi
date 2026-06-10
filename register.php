@@ -30,13 +30,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <?php require_once 'includes/header.php'; ?>
 
-<main class="flex-grow-1 d-flex align-items-center" style="min-height: 60vh;">
-    
+<main class="flex-grow-1 d-flex align-items-center">
     <div class="container" style="max-width: 450px">
         <h2 class="mb-4">Kayıt Ol</h2>
 
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= $error ?></div>
+        <?php endif; ?>
+        <?php if ($success): ?>
+            <div class="alert alert-success">
+                <?= $success ?> <a href="/~st24360859922/login.php">Giriş yapın</a>.
+            </div>
         <?php endif; ?>
 
         <form method="POST">
@@ -45,15 +49,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" name="kullanici_adi" class="form-control" required>
             </div>
             <div class="mb-3">
+                <label class="form-label">E-posta</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
                 <label class="form-label">Şifre</label>
                 <input type="password" name="sifre" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
         </form>
 
-        <p class="mt-3 text-center">Hesabın var mı? <a href="login.php">Giriş yap</a></p>
+        <p class="mt-3 text-center">Hesabın var mı? <a href="/~st24360859922/login.php">Giriş yap</a></p>
     </div>
-
-</main> 
+</main>
 
 <?php require_once 'includes/footer.php'; ?>
