@@ -5,7 +5,7 @@
 ---
 
 > *"Sanat asla bitmez. Sadece terk edilir." 
-© Leonardo Da Vinci*
+> © Leonardo Da Vinci*
 
 ---
 
