@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
 
 /* Genel */
+html, body {
+    height: 100%; 
+}
+
 body {
     background-image: url('/~st24360859922/assets/images/marble.jpg');
     background-repeat: repeat;
@@ -11,6 +15,17 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+}
+
+body > .container, 
+body > main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 /* Navbar */
@@ -30,7 +45,7 @@ body {
 
 /* ── YENİLENEN NAVBAR BUTONLARI ── */
 .navbar .btn-outline-light {
-    border-color: #3d523d; /* Çiğ yeşil yerine daha oturaklı zeytin/adaçayı yeşili */
+    border-color: #3d523d; 
     color: #3d523d;
     font-size: 12px;
     letter-spacing: 1px;
@@ -52,7 +67,7 @@ body {
 }
 
 .navbar .btn-light:hover {
-    background-color: #2b3a2b; /* Üzerine gelindiğinde derinleşen ton */
+    background-color: #2b3a2b; 
     border-color: #2b3a2b;
 }
 
@@ -61,7 +76,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #a94442;
-    border-color: #e0d8cc; /* Çiğ kırmızı yerine mermerle uyumlu yumuşak geçiş */
+    border-color: #e0d8cc; 
 }
 
 .navbar .btn-outline-danger:hover {
@@ -94,7 +109,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
 .green-divider {
     width: 60px;
     height: 1px;
-    background: #3d523d; /* Yeni mat yeşil */
+    background: #3d523d; 
     margin: 16px auto;
 }
 
@@ -102,14 +117,14 @@ h1, h2, h3, h4, h5, .navbar-brand {
 .art-card {
     position: relative;
     cursor: pointer;
-    background: #f5f1e9; /* Mermerle daha iyi kaynaşan yumuşak krem */
+    background: #f5f1e9; 
     padding: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Daha hafif, premium gölge */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .art-card:hover {
-    box-shadow: 0 10px 25px rgba(45,54,45,0.1); /* Siyah yerine çok hafif yeşilimsi antrasit gölge */
+    box-shadow: 0 10px 25px rgba(45,54,45,0.1); 
     transform: translateY(-4px);
 }
 
@@ -117,14 +132,14 @@ h1, h2, h3, h4, h5, .navbar-brand {
     content: '';
     position: absolute;
     top: 5px; left: 5px; right: 5px; bottom: 5px;
-    border: 1px solid rgba(180,160,120,0.4); /* İnce altın/bronz esintili çerçeve */
+    border: 1px solid rgba(180,160,120,0.4);
     pointer-events: none;
     z-index: 2;
     transition: border-color 0.3s;
 }
 
 .art-card:hover::before {
-    border-color: rgba(61,82,61,0.5); /* Hover durumunda adaçayı yeşili çerçeve */
+    border-color: rgba(61,82,61,0.5); 
 }
 
 .art-card .img-wrapper {
@@ -138,7 +153,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* Daha pürüzsüz animasyon */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
 }
 
 .art-card:hover img {
@@ -163,7 +178,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     opacity: 0;
     transform: translateY(-4px);
     transition: opacity 0.3s, transform 0.3s, background 0.2s, color 0.2s;
-    color: #b5a48c; /* Klasik gri yerine soft altın/bronz tonu */
+    color: #b5a48c; 
     z-index: 3;
 }
 
@@ -184,7 +199,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     background: rgba(255, 255, 255, 0.98);
-    border-top: 1px solid #3d523d; /* İnceltilmiş zarif çizgi */
+    border-top: 1px solid #3d523d; 
     padding: 12px 14px;
     transform: translateY(100%);
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -209,7 +224,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
 
 .art-card .card-info p {
     font-size: 10px;
-    color: #8a8275; /* Daha sıcak bir gri-kahve tonu */
+    color: #8a8275; 
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin: 0;
@@ -239,7 +254,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
 
 /* ── GENEL ANA BUTONLAR (Krem/Mermer Uyumlu) ── */
 .btn-primary {
-    background-color: #3d523d; /* Asil adaçayı yeşili */
+    background-color: #3d523d; 
     border-color: #3d523d;
     border-radius: 0;
     letter-spacing: 1.5px;
