@@ -1,78 +1,115 @@
-# ▶︎ Sanat Müzesi Web Uygulaması 
+# Sanat Müzesi
 
-Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre filtreleyip arayabileceğiniz, beğendiğiniz eserleri favorilerinize ekleyip toplulukla etkileşime geçebileceğiniz modern ve güvenli bir web uygulamasıdır
+*Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre filtreleyip arayabileceğiniz, beğendiğiniz eserleri favorilerinize ekleyip toplulukla etkileşime geçebileceğiniz modern ve güvenli bir web uygulamasıdır.*
 
- **Canlı Demo:** [http://95.130.171.20/~st24360859922](http://95.130.171.20/~st24360859922)
- 
- **Tanıtım Videosu:** [https://youtu.be/y-5IXS5a_pA?si=sFvzvGth1foneC3p](https://youtu.be/y-5IXS5a_pA?si=sFvzvGth1foneC3p)
- 
 ---
 
-##  Geliştiriciler
-- **Madina Yusupova** - 24360859922
-- **Feyza Yavuz** - 24360859055
-- **Nurseza Karakaya** - 24360859038
+> *"Sanat asla bitmez. Sadece terk edilir." © Leonardo Da Vinci"*
+
+---
+
+**Canlı Demo:** [http://95.130.171.20/~st24360859922](http://95.130.171.20/~st24360859922)
+
+**Tanıtım Videosu:** [https://youtu.be/y-5IXS5a_pA](https://youtu.be/y-5IXS5a_pA?si=sFvzvGth1foneC3p)
+
+---
+
+## Geliştiriciler
+
+| | İsim | Numara |
+|:---:|:---|:---|
+| ☾ | *Madina Yusupova* | 24360859922 |
+| ☼ | *Feyza Yavuz* | 24360859055 |
+| ♥︎ | *Nurseza Karakaya* | 24360859038 |
 
 ---
 
 ## Ekran Görüntüleri
 
-### Ana Sayfa
+### *Ana Sayfa — Koleksiyon Galerisi*
 ![Ana Sayfa](assets/images/anasayfa.png)
 
-### Eser Detay Sayfası
-![Eser Detay Sayfası](assets/images/detay1.png)
-![Eser Detay Sayfası](assets/images/detay2.png)
+### *Eser Detay Sayfası*
+![Eser Detay](assets/images/detay1.png)
+![Eser Detay](assets/images/detay2.png)
 
-### Kullanıcı Giriş Sayfası ve Profili
-![Kullanıcı Giriş](assets/images/giris.png)
-![Kullanıcı Giriş](assets/images/favori.png)
-
----
-
-
-##  Özellikler 
-
-- **Kullanıcı Yönetimi:** Güvenli kayıt olma, giriş yapma ve oturum (Session) yönetimi
-- **Profil Güncelleme:** Kullanıcıların kendi kullanıcı adlarını ve şifrelerini güncelleyebileceği profil paneli
-- **Dinamik Listeleme ve Arama:** Sanat eserlerini isme veya sanatçıya göre arama, türlerine göre filtreleme
-- **Gelişmiş Etkileşim:** - Asenkron (AJAX / Fetch API) çalışan favorilere ekleme ve çıkarma sistemi
-  - Eserlerin altına yorum yapma ve kullanıcıların yalnızca kendi yorumlarını silebilmesini sağlayan yetkilendirme mekanizması
-- **Güvenlik Odaklı Mimari:**
-  - SQL Injection saldırılarına karşı **PDO Prepared Statements** kullanımı
-  - XSS (Cross-Site Scripting) saldırılarını önlemek için **HTML Purifier / htmlspecialchars** koruması
-  - Şifrelerin veritabanında güvenli bir şekilde **`password_hash()`** (BCrypt) ile saklanması
+### *Kullanıcı Girişi ve Profil Paneli*
+![Giriş](assets/images/giris.png)
+![Favoriler](assets/images/favori.png)
 
 ---
 
-## Kullanılan Teknolojiler 
+## Özellikler
 
-- **Backend:** PHP 8.x
-- **Database:** MySQL
-- **Frontend:** HTML5, CSS3, JavaScript 
-- **UI Framework:** Bootstrap 5 & Bootstrap Icons
-- **Typography:** Playfair Display & Lato (Google Fonts)
+*Bu uygulama, modern bir sanat müzesinin dijital deneyimini sunmak amacıyla geliştirilmiştir.*
 
----
-
-## Veritabanı Mimarisi 
-
-Proje ilişkisel bir veritabanı modeli üzerine kurulmuştur ve 4 temel tablodan oluşmaktadır:
-
-| Tablo Adı | Açıklama | Temel Alanlar |
-| :--- | :--- | :--- |
-| `kullanicilar` | Kayıtlı kullanıcıların bilgilerini ve şifre hash'lerini tutar. | `id`, `kullanici_adi`, `email`, `sifre_hash` |
-| `eserler` | Müzedeki sanat eserlerinin detaylarını barındırır. | `id`, `eser_adi`, `sanatci`, `yil`, `tur`, `aciklama`, `resim_url` |
-| `favoriler` | Kullanıcılar ve eserler arasındaki beğeni ilişkisini tutar. | `id`, `kullanici_id`, `eser_id` |
-| `yorumlar` | Eserlere yapılan kullanıcı yorumlarını ve tarihlerini saklar. | `id`, `kullanici_id`, `eser_id`, `icerik`, `olusturma_tarihi` |
+- **Kullanıcı Yönetimi** — *Güvenli kayıt, giriş ve oturum (Session) yönetimi*
+- **Profil Paneli** — *Kullanıcı adı ve şifre güncelleme*
+- **Galeri & Arama** — *Eserleri isme, sanatçıya veya türe göre arama ve filtreleme*
+- **Favoriler** — *AJAX / Fetch API ile asenkron favori ekleme ve çıkarma*
+- **Yorumlar** — *Eserlere yorum yapma; yalnızca kendi yorumunu silme yetkisi*
+- **Güvenlik** — *PDO Prepared Statements, htmlspecialchars ve password_hash() (BCrypt)*
 
 ---
 
-## Kurulum ve Çalıştırma 
+## Kullanılan Teknolojiler
 
-Projeyi yeral ortamınızda (XAMPP, WampServer vb.) veya bir uzak sunucuda çalıştırmak için aşağıdaki adımları takip edin:
+| Katman | Teknoloji |
+|:---|:---|
+| *Backend* | PHP 8.x (saf, framework kullanılmadı) |
+| *Veritabanı* | MySQL / MariaDB |
+| *Frontend* | HTML5, CSS3, JavaScript |
+| *UI Framework* | Bootstrap 5 & Bootstrap Icons |
+| *Tipografi* | Playfair Display & Lato (Google Fonts) |
 
-### 1. Projeyi Klonlayın
+---
+
+## Veritabanı Mimarisi
+
+*Proje, ilişkisel bir veritabanı modeli üzerine kurulmuştur ve 4 temel tablodan oluşmaktadır.*
+
+| Tablo | Açıklama | Temel Alanlar |
+|:---|:---|:---|
+| `kullanicilar` | *Kullanıcı bilgileri ve şifre hash'leri* | `id`, `kullanici_adi`, `email`, `sifre_hash` |
+| `eserler` | *Sanat eseri detayları* | `id`, `eser_adi`, `sanatci`, `yil`, `tur`, `aciklama`, `gorsel_yolu` |
+| `favoriler` | *Kullanıcı–eser beğeni ilişkisi* | `id`, `kullanici_id`, `eser_id` |
+| `yorumlar` | *Eserlere yapılan yorumlar* | `id`, `kullanici_id`, `eser_id`, `icerik`, `olusturma_tarihi` |
+
+---
+
+## Kurulum
+
+*Projeyi yerel ortamınızda (XAMPP, WampServer vb.) çalıştırmak için:*
+
+**1. Repoyu klonlayın**
 ```bash
-git clone [https://github.com/kullanici_adi/repo_adi.git](https://github.com/kullanici_adi/repo_adi.git)
+git clone https://github.com/madineyusuf/sanat_muzesi.git
+cd sanat_muzesi
+```
+
+**2. Veritabanını oluşturun**
+
+*phpMyAdmin veya MySQL CLI üzerinden `db.sql` dosyasını içe aktarın.*
+
+**3. Bağlantı ayarlarını yapın**
+
+```bash
+cp includes/db.example.php includes/db.php
+```
+
+*`includes/db.php` dosyasını açıp kendi veritabanı bilgilerinizi girin.*
+
+**4. Görselleri ekleyin**
+
+*`assets/images/artworks/` klasörüne eser görsellerini yükleyin.*
+
+---
+
+## Güvenlik Notları
+
+>  *`includes/db.php` dosyası `.gitignore` ile versiyon kontrolünden hariç tutulmuştur. Bu dosyayı asla herkese açık bir repoya yüklemeyin.*
+
+---
+
+*© BM BTÜ 2026 — Sanat Müzesi *i_adi/repo_adi.git](https://github.com/kullanici_adi/repo_adi.git)
 cd repo_adi
