@@ -3,6 +3,7 @@
 Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre filtreleyip arayabileceğiniz, beğendiğiniz eserleri favorilerinize ekleyip toplulukla etkileşime geçebileceğiniz modern ve güvenli bir web uygulamasıdır.
 
  **Canlı Demo:** [http://95.130.171.20/~st24360859922](http://95.130.171.20/~st24360859922)
+ 
  **Tanıtım Videosu:** 
 
 ---
@@ -23,8 +24,9 @@ Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre
 ![Eser Detay Sayfası](assets/images/detay1.jpg)
 ![Eser Detay Sayfası](assets/images/detay2.jpg)
 
-### Kullanıcı Giriş Sayfası
+### Kullanıcı Giriş Sayfası ve Profili
 ![Kullanıcı Giriş](assets/images/giris.jpg)
+![Kullanıcı Giriş](assets/images/favori.jpg)
 
 ---
 
