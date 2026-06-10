@@ -43,7 +43,7 @@ if (isLoggedIn()) {
 ?>
 <?php require_once 'includes/header.php'; ?>
 
-<div class="container mt-4">
+<div class="container mt-4 pb-5">
 
     <a href="index.php" class="btn btn-outline-secondary btn-sm mb-4">
         <i class="bi bi-arrow-left"></i> Geri Dön
